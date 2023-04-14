@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2023 Ivan Gagis <igagis@gmail.com>
@@ -19,3 +20,50 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+/* ================ LICENSE END ================ */
+
+#pragma once
+
+#include <map>
+#include <optional>
+#include <string>
+#include <string_view>
+#include <vector>
+
+namespace httpmodel {
+
+enum class header {
+	// WARNING: do not change order, add new items to the end of enum
+	host,
+	accept,
+	content_length,
+
+	// TODO: add well known headers
+
+	enum_size
+};
+
+std::string_view to_string(header h);
+
+class headers
+{
+	std::map<std::string, std::string, std::less<>> hdrs;
+
+public:
+	void add(std::string&& name, std::string&& value);
+	void add(header h, std::string&& value);
+
+	std::optional<std::string_view> get(std::string_view name) const noexcept;
+	std::optional<std::string_view> get(header h) const noexcept;
+
+	const decltype(hdrs)& get_map() const noexcept
+	{
+		return this->hdrs;
+	}
+
+	void append_to(std::vector<uint8_t>& buf) const;
+};
+
+} // namespace httpmodel

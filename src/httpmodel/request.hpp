@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2023 Ivan Gagis <igagis@gmail.com>
@@ -19,3 +20,33 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+/* ================ LICENSE END ================ */
+
+#pragma once
+
+#include <vector>
+
+#include "../urlmodel/url.hpp"
+
+#include "headers.hpp"
+#include "http.hpp"
+
+namespace httpmodel {
+
+class request
+{
+public:
+	httpmodel::protocol protocol;
+	httpmodel::method method;
+
+	// URL in HTTP request has only path, query and fragment parts
+	urlmodel::url url;
+
+	httpmodel::headers headers;
+
+	std::vector<uint8_t> body;
+};
+
+} // namespace httpmodel

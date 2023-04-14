@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2023 Ivan Gagis <igagis@gmail.com>
@@ -19,3 +20,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+/* ================ LICENSE END ================ */
+
+#include "util.hxx"
+
+utki::span<const uint8_t> httpmodel::parse_skip_spaces(utki::span<const uint8_t> data)
+{
+	auto i = data.begin();
+	for (; i != data.end(); ++i) {
+		auto c = char(*i);
+		if (c != ' ') {
+			break;
+		}
+	}
+	data = data.subspan(std::distance(data.begin(), i));
+	return data;
+}

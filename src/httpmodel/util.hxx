@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2023 Ivan Gagis <igagis@gmail.com>
@@ -19,3 +20,22 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+/* ================ LICENSE END ================ */
+
+#pragma once
+
+#include <utki/span.hpp>
+
+namespace httpmodel {
+
+/**
+ * @brief Skip spaces.
+ * @param data - data span to skip leading spaces for.
+ * @return Data span without leading spaces. If empty span is returned, then
+ *   the original span contained only spaces or was empty in the beginnig place.
+ */
+utki::span<const uint8_t> parse_skip_spaces(utki::span<const uint8_t> data);
+
+} // namespace httpmodel

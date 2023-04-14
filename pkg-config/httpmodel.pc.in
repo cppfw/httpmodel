@@ -1,0 +1,9 @@
+Name: httpmodel   # human-readable name
+Description: URL model C++ library # human-readable description
+Version: $(version)
+URL: https://github.com/cppfw/httpmodel
+Requires:
+Conflicts:
+Libs: -lhttpmodel
+Libs.private:
+Cflags:

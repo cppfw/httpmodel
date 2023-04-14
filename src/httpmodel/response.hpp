@@ -1,3 +1,4 @@
+/*
 MIT License
 
 Copyright (c) 2023 Ivan Gagis <igagis@gmail.com>
@@ -19,3 +20,42 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+/* ================ LICENSE END ================ */
+
+#pragma once
+
+#include <vector>
+
+#include "headers.hpp"
+#include "http.hpp"
+#include "request.hpp"
+
+namespace httpmodel {
+
+class response
+{
+public:
+	explicit response() = default;
+
+	response(const httpmodel::request& request);
+
+	response(const httpmodel::request& request, httpmodel::status status);
+
+	httpmodel::protocol protocol;
+
+	httpmodel::status status;
+
+	std::string status_text;
+
+	httpmodel::headers headers;
+
+	std::vector<uint8_t> body;
+
+	std::vector<uint8_t> to_bytes_no_body() const;
+
+	std::vector<uint8_t> to_bytes() const;
+};
+
+} // namespace httpmodel
