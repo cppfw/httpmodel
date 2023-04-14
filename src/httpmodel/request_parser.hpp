@@ -31,7 +31,7 @@ SOFTWARE.
 #include <string_view>
 #include <vector>
 
-#include "../urlmodel/parser.hpp"
+#include <urlmodel/parser.hpp>
 
 #include "headers_parser.hpp"
 #include "request.hpp"

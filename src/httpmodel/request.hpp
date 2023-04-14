@@ -28,7 +28,7 @@ SOFTWARE.
 
 #include <vector>
 
-#include "../urlmodel/url.hpp"
+#include <urlmodel/url.hpp>
 
 #include "headers.hpp"
 #include "http.hpp"

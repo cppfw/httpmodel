@@ -1,17 +1,5 @@
-liburlmodel (0.1.2) unstable; urgency=medium
-
-  * add dbgsrc package
-
- -- Ivan Gagis <igagis@gmail.com>  Fri, 14 Apr 2023 14:51:55 +0300
-
-liburlmodel (0.1.1) unstable; urgency=medium
-
-  * initial release
-
- -- Ivan Gagis <igagis@gmail.com>  Fri, 14 Apr 2023 14:18:07 +0300
-
-liburlmodel (0.1.0) unstable; urgency=low
+libhttpmodel (0.1.0) unstable; urgency=low
 
   * Initial release
 
- -- Ivan Gagis <igagis@gmail.com>  Fri, 14 Apr 2023 12:24:00 +0200
+ -- Ivan Gagis <igagis@gmail.com>  Fri, 14 Apr 2023 15:36:00 +0200
