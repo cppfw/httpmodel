@@ -36,6 +36,9 @@ SOFTWARE.
 
 namespace httpmodel {
 
+// TODO: why lint complains?
+// "error: an exception may be thrown in function 'headers_parser'"
+// NOLINTNEXTLINE(bugprone-exception-escape)
 class headers_parser
 {
 	enum class state {

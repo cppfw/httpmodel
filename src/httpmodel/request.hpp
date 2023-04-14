@@ -35,6 +35,9 @@ SOFTWARE.
 
 namespace httpmodel {
 
+// TODO: why lint complains?
+// "error: an exception may be thrown in function 'request'"
+// NOLINTNEXTLINE(bugprone-exception-escape)
 class request
 {
 public:
