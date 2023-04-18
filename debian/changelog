@@ -1,3 +1,9 @@
+libhttpmodel (0.1.2) unstable; urgency=medium
+
+  * add Connection header
+
+ -- Ivan Gagis <igagis@gmail.com>  Tue, 18 Apr 2023 11:19:14 +0300
+
 libhttpmodel (0.1.1) unstable; urgency=medium
 
   * initial release
