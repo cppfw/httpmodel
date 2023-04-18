@@ -41,7 +41,8 @@ enum class protocol {
  * @brief Parse request protocol from string.
  * @param str - string to parse request protocol from.
  * @return Parsed request protocol.
- * @throw std::invalid_argument in case of unknown protocol is given in the input string.
+ * @throw std::invalid_argument in case of unknown protocol is given in the
+ * input string.
  */
 protocol protocol_from_string(std::string_view str);
 
@@ -71,7 +72,8 @@ enum class method {
  * @brief Parse request method from string.
  * @param str - string to parse request method from.
  * @return Parsed request method.
- * @throw std::invalid_argument in case unknown request method is given in the input string.
+ * @throw std::invalid_argument in case unknown request method is given in the
+ * input string.
  */
 method method_from_string(std::string_view str);
 

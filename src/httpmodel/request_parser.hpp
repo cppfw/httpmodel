@@ -70,7 +70,8 @@ class request_parser
 
 	void set_state_after_headers();
 
-	size_t num_body_bytes_expected; // holds number of body bytes remain to read when in state::body
+	// holds number of body bytes remain to read when in state::body
+	size_t num_body_bytes_expected;
 
 public:
 	httpmodel::request request;

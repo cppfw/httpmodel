@@ -69,7 +69,7 @@ utki::span<const uint8_t> headers_parser::parse_value(utki::span<const uint8_t> 
 			if (!this->buf.empty() && this->buf.back() == '\r') {
 				this->buf.pop_back();
 			}
-			this->headers.add(std::move(this->header_name), utki::make_string(this->buf));
+			this->headers.put(std::move(this->header_name), utki::make_string(this->buf));
 			this->buf.clear();
 			this->cur_state = state::name;
 			++i;

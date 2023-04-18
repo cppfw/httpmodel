@@ -101,9 +101,9 @@ utki::span<const uint8_t> request_parser::parse_body(utki::span<const uint8_t> d
 
 void request_parser::set_state_after_headers()
 {
-	// According to spec, server SHOULD read and forward message body on any request,
-	// even if the message body is not assumed by the request method.
-	// See section 4.3 of https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html
+	// According to spec, server SHOULD read and forward message body on any
+	// request, even if the message body is not assumed by the request method. See
+	// section 4.3 of https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html
 
 	auto content_length_header = this->request.headers.get(httpmodel::to_string(httpmodel::header::content_length));
 	if (!content_length_header.has_value()) {
@@ -111,7 +111,8 @@ void request_parser::set_state_after_headers()
 
 		// TODO: implement support of "Transfer-Encoding" header and
 		//   "multipart/byteranges" mediatype.
-		//   See section 4.4 of https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html
+		//   See section 4.4 of
+		//   https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html
 
 		// no body assumed
 		this->cur_state = state::end;

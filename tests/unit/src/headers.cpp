@@ -8,11 +8,11 @@ using namespace std::string_view_literals;
 namespace{
 tst::set set("http__headers", [](tst::suite& suite){
     suite.add(
-        "add_get",
+        "put_get",
         [](){
             httpmodel::headers h;
 
-            h.add("Host", "blabla.com");
+            h.put("Host", "blabla.com");
 
             tst::check(h.get("Host"), SL);
         }

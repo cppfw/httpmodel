@@ -53,8 +53,8 @@ class headers
 	std::map<std::string, std::string, std::less<>> hdrs;
 
 public:
-	void add(std::string&& name, std::string&& value);
-	void add(header h, std::string&& value);
+	void put(std::string&& name, std::string&& value);
+	void put(header h, std::string&& value);
 
 	std::optional<std::string_view> get(std::string_view name) const noexcept;
 	std::optional<std::string_view> get(header h) const noexcept;
