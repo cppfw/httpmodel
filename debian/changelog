@@ -1,3 +1,9 @@
+libhttpmodel (0.1.3) unstable; urgency=medium
+
+  * do not install tests
+
+ -- Ivan Gagis <igagis@gmail.com>  Tue, 18 Apr 2023 14:39:10 +0300
+
 libhttpmodel (0.1.2) unstable; urgency=medium
 
   * add Connection header
