@@ -39,6 +39,7 @@ enum class header {
 	host,
 	accept,
 	content_length,
+	connection,
 
 	// TODO: add well known headers
 

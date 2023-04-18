@@ -33,10 +33,8 @@ SOFTWARE.
 using namespace httpmodel;
 
 namespace {
-const constexpr std::array<std::string_view, size_t(header::enum_size)> header_enum_to_string_mapping = {
-	"Host",
-	"Accept",
-	"Content-Length"};
+const constexpr std::array<std::string_view, size_t(header::enum_size)> header_enum_to_string_mapping =
+	{"Host", "Accept", "Content-Length", "Connection"};
 } // namespace
 
 std::string_view httpmodel::to_string(header h)
