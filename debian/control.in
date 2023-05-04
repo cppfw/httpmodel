@@ -28,7 +28,9 @@ Description: debugging sources for libhttpmodel$(soname) package.
 Package: libhttpmodel-dev
 Section: libdevel
 Architecture: any
-Depends: liburlmodel-dev, libhttpmodel$(soname) (= ${binary:Version}), ${misc:Depends}
+Depends:
+	liburlmodel-dev,
+	libhttpmodel$(soname) (= ${binary:Version}), ${misc:Depends}
 Suggests: libhttpmodel-doc
 Description: cross-platform HTTP model C++ library.
  HTTP model library.
