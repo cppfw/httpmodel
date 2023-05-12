@@ -58,12 +58,12 @@ std::optional<std::string_view> headers::get(header h) const noexcept
 	return this->get(to_string(h));
 }
 
-void headers::put(std::string&& name, std::string&& value)
+void headers::put(std::string name, std::string value)
 {
 	this->hdrs.insert_or_assign(std::move(name), std::move(value));
 }
 
-void headers::put(header h, std::string&& value)
+void headers::put(header h, std::string value)
 {
 	this->put(std::string(to_string(h)), std::move(value));
 }
