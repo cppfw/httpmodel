@@ -1,3 +1,9 @@
+libhttpmodel (0.1.5) unstable; urgency=medium
+
+  * conan: deploy
+
+ -- Ivan Gagis <igagis@gmail.com>  Wed, 17 May 2023 10:25:31 +0300
+
 libhttpmodel (0.1.4) unstable; urgency=medium
 
   * rename add() -> put()
