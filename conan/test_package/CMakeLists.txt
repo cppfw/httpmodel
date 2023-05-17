@@ -3,7 +3,7 @@ project(PackageTest CXX)
 
 # set(CMAKE_VERBOSE_MAKEFILE on)
 
-find_package(urlmodel CONFIG REQUIRED)
+find_package(httpmodel CONFIG REQUIRED)
 
 add_executable(example example.cpp)
 target_link_libraries(example httpmodel::httpmodel)
