@@ -1,3 +1,9 @@
+libhttpmodel (0.1.7) unstable; urgency=medium
+
+  * macos: python workaround
+
+ -- Ivan Gagis <igagis@gmail.com>  Wed, 05 Jul 2023 14:11:08 +0300
+
 libhttpmodel (0.1.6) unstable; urgency=medium
 
   * fix lint issues
