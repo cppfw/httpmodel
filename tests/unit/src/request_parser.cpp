@@ -21,7 +21,7 @@ std::string print_parsed_http_request(const httpmodel::request& r){
 }
 
 namespace{
-tst::set set("httpmodel__request_parser", [](tst::suite& suite){
+const tst::set set("httpmodel__request_parser", [](tst::suite& suite){
     suite.add<std::pair<std::string, std::string>>(
         "samples",
         {
@@ -111,6 +111,7 @@ tst::set set("httpmodel__request_parser", [](tst::suite& suite){
             httpmodel::request_parser parser;
 
             parser.feed(utki::make_span<const uint8_t>(
+                // NOLINTNEXTLINE(cppcoreguidelines-pro-type-reinterpret-cast)
                 reinterpret_cast<const uint8_t*>(p.first.data()),
                 p.first.size()
             ));
@@ -151,6 +152,7 @@ tst::set set("httpmodel__request_parser", [](tst::suite& suite){
 
             parser.feed(
                 utki::make_span(
+                    // NOLINTNEXTLINE(cppcoreguidelines-pro-type-reinterpret-cast)
                     reinterpret_cast<const uint8_t*>(p.data()),
                     p.size()
                 )

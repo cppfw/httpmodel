@@ -41,8 +41,8 @@ namespace httpmodel {
 class request
 {
 public:
-	httpmodel::protocol protocol;
-	httpmodel::method method;
+	httpmodel::protocol protocol = httpmodel::protocol::http_1_0;
+	httpmodel::method method = httpmodel::method::get;
 
 	// URL in HTTP request has only path, query and fragment parts
 	urlmodel::url url;

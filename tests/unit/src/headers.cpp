@@ -6,7 +6,7 @@
 using namespace std::string_view_literals;
 
 namespace{
-tst::set set("http__headers", [](tst::suite& suite){
+const tst::set set("http__headers", [](tst::suite& suite){
     suite.add(
         "put_get",
         [](){

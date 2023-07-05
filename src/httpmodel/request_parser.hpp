@@ -54,7 +54,7 @@ class request_parser
 	};
 
 	state cur_state = state::method;
-	state state_after_skiping_spaces;
+	state state_after_skiping_spaces = state::end;
 
 	std::vector<char> buf;
 
@@ -71,7 +71,7 @@ class request_parser
 	void set_state_after_headers();
 
 	// holds number of body bytes remain to read when in state::body
-	size_t num_body_bytes_expected;
+	size_t num_body_bytes_expected = 0;
 
 public:
 	httpmodel::request request;

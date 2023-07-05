@@ -49,7 +49,7 @@ class headers_parser
 	};
 
 	state cur_state = state::name;
-	state state_after_skiping_spaces;
+	state state_after_skiping_spaces = state::end;
 
 	std::vector<char> buf; // for storing currently parsed string
 

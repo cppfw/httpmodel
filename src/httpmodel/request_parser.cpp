@@ -31,6 +31,7 @@ SOFTWARE.
 #include <stdexcept>
 
 #include <utki/string.hpp>
+#include <utki/util.hpp>
 
 #include "util.hxx"
 

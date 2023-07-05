@@ -43,9 +43,9 @@ public:
 
 	response(const httpmodel::request& request, httpmodel::status status);
 
-	httpmodel::protocol protocol;
+	httpmodel::protocol protocol = httpmodel::protocol::http_1_0;
 
-	httpmodel::status status;
+	httpmodel::status status = httpmodel::status::http_200_ok;
 
 	std::string status_text;
 
