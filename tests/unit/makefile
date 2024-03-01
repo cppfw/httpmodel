@@ -9,7 +9,7 @@ this_srcs := $(call prorab-src-dir, src)
 
 this_u_httpmodel_lib := ../../src/out/$(c)/libhttpmodel$(dot_so)
 
-this_cxxflags += -I ../../src
+this_cxxflags += -isystem ../../src
 
 this_ldlibs += -ltst -lutki -lurlmodel $(this_u_httpmodel_lib)
 
