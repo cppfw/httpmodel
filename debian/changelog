@@ -1,3 +1,9 @@
+libhttpmodel (0.1.8) unstable; urgency=medium
+
+  * aptian
+
+ -- Ivan Gagis <igagis@gmail.com>  Fri, 01 Mar 2024 16:27:54 +0200
+
 libhttpmodel (0.1.7) unstable; urgency=medium
 
   * macos: python workaround
