@@ -60,7 +60,7 @@ public:
 	std::optional<std::string_view> get(std::string_view name) const noexcept;
 	std::optional<std::string_view> get(header h) const noexcept;
 
-	const decltype(hdrs) & get_map() const noexcept
+	const decltype(hdrs)& get_map() const noexcept
 	{
 		return this->hdrs;
 	}

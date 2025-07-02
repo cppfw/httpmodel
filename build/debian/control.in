@@ -15,29 +15,45 @@ Standards-Version: 3.9.2
 Package: libhttpmodel$(soname)
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends:
+	${shlibs:Depends},
+	${misc:Depends}
 Description: cross-platform HTTP model C++ library.
- HTTP model library.
+	HTTP model library.
+
+Package: libhttpmodel-dbg$(soname)
+Section: libs
+Architecture: any
+Depends:
+	${shlibs:Depends},
+	${misc:Depends}
+Description: cross-platform HTTP model C++ library.
+	Debug version of libhttpmodel.
 
 Package: libhttpmodel$(soname)-dbgsrc
 Section: debug
 Architecture: all
-Depends: libhttpmodel$(soname)-dbgsym (= ${binary:Version}), ${misc:Depends}
+Depends:
+	libhttpmodel$(soname)-dbgsym (= ${binary:Version}),
+	libhttpmodel-dbg$(soname)-dbgsym (= ${binary:Version}),
+	${misc:Depends}
 Description: debugging sources for libhttpmodel$(soname) package.
 
 Package: libhttpmodel-dev
 Section: libdevel
 Architecture: any
 Depends:
-	liburlmodel-dev,
-	libhttpmodel$(soname) (= ${binary:Version}), ${misc:Depends}
+	libhttpmodel$(soname) (= ${binary:Version}),
+	libhttpmodel-dbg$(soname) (= ${binary:Version}),
+	${misc:Depends},
+	liburlmodel-dev
 Suggests: libhttpmodel-doc
 Description: cross-platform HTTP model C++ library.
- HTTP model library.
+	HTTP model library.
 
 Package: libhttpmodel-doc
 Section: doc
 Architecture: all
 Depends: ${misc:Depends}
 Description: documentation for libhttpmodel library.
- For more details see description to libhttpmodel-dev package.
+	For more details see description to libhttpmodel-dev package.
