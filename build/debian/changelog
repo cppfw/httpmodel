@@ -1,3 +1,9 @@
+libhttpmodel (0.1.12) unstable; urgency=medium
+
+  * fix
+
+ -- Ivan Gagis <igagis@gmail.com>  Thu, 03 Jul 2025 12:59:40 +0300
+
 libhttpmodel (0.1.11) unstable; urgency=medium
 
   * add debian dbg package
