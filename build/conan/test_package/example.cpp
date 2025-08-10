@@ -1,5 +1,7 @@
 #include <httpmodel/request.hpp>
 
+#include <iostream>
+
 int main(int argc, const char** argv){
 	httpmodel::request req;
 
