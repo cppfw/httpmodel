@@ -1,3 +1,9 @@
+libhttpmodel (0.1.13) unstable; urgency=medium
+
+  * debian trixie build
+
+ -- Ivan Gagis <igagis@gmail.com>  Sun, 10 Aug 2025 23:54:27 +0300
+
 libhttpmodel (0.1.12) unstable; urgency=medium
 
   * fix
