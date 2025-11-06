@@ -1,3 +1,9 @@
+libhttpmodel (0.1.14) unstable; urgency=medium
+
+  * debian: fix dbgsrc path
+
+ -- Ivan Gagis <igagis@gmail.com>  Thu, 06 Nov 2025 16:16:58 +0200
+
 libhttpmodel (0.1.13) unstable; urgency=medium
 
   * debian trixie build
