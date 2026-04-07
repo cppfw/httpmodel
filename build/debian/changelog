@@ -1,3 +1,9 @@
+libhttpmodel (0.1.15) unstable; urgency=medium
+
+  * cmake
+
+ -- Ivan Gagis <igagis@gmail.com>  Tue, 07 Apr 2026 12:38:37 +0300
+
 libhttpmodel (0.1.14) unstable; urgency=medium
 
   * debian: fix dbgsrc path
