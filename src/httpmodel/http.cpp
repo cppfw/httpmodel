@@ -61,7 +61,7 @@ protocol httpmodel::protocol_from_string(std::string_view str)
 std::string_view httpmodel::to_string(protocol p) noexcept
 {
 	auto i = protocol_enum_to_name_mapping.find(p);
-	ASSERT(i != protocol_enum_to_name_mapping.end())
+	utki::assert(i != protocol_enum_to_name_mapping.end(), SL);
 	return i->second;
 }
 
@@ -95,7 +95,7 @@ method httpmodel::method_from_string(std::string_view str)
 std::string_view httpmodel::to_string(method m) noexcept
 {
 	auto i = method_enum_to_name_mapping.find(m);
-	ASSERT(i != method_enum_to_name_mapping.end())
+	utki::assert(i != method_enum_to_name_mapping.end(), SL);
 	return i->second;
 }
 

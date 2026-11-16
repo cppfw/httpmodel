@@ -39,7 +39,7 @@ const constexpr std::array<std::string_view, size_t(header::enum_size)> header_e
 
 std::string_view httpmodel::to_string(header h)
 {
-	ASSERT(size_t(h) < size_t(header::enum_size))
+	utki::assert(size_t(h) < size_t(header::enum_size), SL);
 	// NOLINTNEXTLINE(cppcoreguidelines-pro-bounds-constant-array-index)
 	return header_enum_to_string_mapping[size_t(h)];
 }

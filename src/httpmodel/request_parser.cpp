@@ -120,7 +120,7 @@ void request_parser::set_state_after_headers()
 		return;
 	}
 
-	ASSERT(content_length_header.has_value())
+	utki::assert(content_length_header.has_value(), SL);
 	utki::string_parser p(content_length_header.value());
 	this->num_body_bytes_expected = p.read_number<size_t>();
 	this->request.body.reserve(this->num_body_bytes_expected);
@@ -132,7 +132,7 @@ utki::span<const uint8_t> request_parser::feed(utki::span<const uint8_t> data)
 	while (!data.empty()) {
 		switch (this->cur_state) {
 			case state::skip_spaces:
-				ASSERT(!data.empty())
+				utki::assert(!data.empty(), SL);
 				data = parse_skip_spaces(data);
 				if (!data.empty()) {
 					// spaces skipped
@@ -161,7 +161,7 @@ utki::span<const uint8_t> request_parser::feed(utki::span<const uint8_t> data)
 					this->request.headers = std::move(this->headers_parser.headers);
 					this->set_state_after_headers();
 				} else {
-					ASSERT(data.empty())
+					utki::assert(data.empty(), SL);
 				}
 				break;
 			case state::body:

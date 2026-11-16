@@ -87,7 +87,7 @@ utki::span<const uint8_t> headers_parser::feed(utki::span<const uint8_t> data)
 	while (!data.empty()) {
 		switch (this->cur_state) {
 			case state::skip_spaces:
-				ASSERT(!data.empty())
+				utki::assert(!data.empty(), SL);
 				data = parse_skip_spaces(data);
 				if (!data.empty()) {
 					// spaces skipped
